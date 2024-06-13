@@ -1,7 +1,7 @@
 from database import create_db
-from commands.user import create_user, get_all_users, get_user_by_id
-from commands.category import create_category , get_all_categories
-from commands.blog import create_post, get_all_posts, get_post_by_id, get_posts_by_category, get_posts_by_user, delete_post
+from blog.user import create_user, get_all_users, get_user_by_id
+from blog.category import create_category , get_all_categories
+from blog.blog import create_post, get_all_posts, get_post_by_id, get_posts_by_category, get_posts_by_user, delete_post
 from art import text2art
 
 def welcome_message(color="red"):
