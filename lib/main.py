@@ -2,25 +2,12 @@ from database import create_db
 from blog.user import create_user, get_all_users, get_user_by_id
 from blog.category import create_category , get_all_categories
 from blog.blog import create_post, get_all_posts, get_post_by_id, get_posts_by_category, get_posts_by_user, delete_post
-from art import text2art
 
-def welcome_message(color="red"):
-    # Generate ASCII art
-    art = text2art("Blog Creater")
-    
-    # ANSI escape codes for color
-    color_code = {
-        "red": "\033[91m",
-        "green": "\033[92m",
-        "yellow": "\033[93m",
-        "reset": "\033[0m"
-    }
-    
-    # Print ASCII art with color
-    print(color_code[color] + art + color_code["reset"])
+
+
 
 def main():
-    welcome_message("green")
+    
 
     create_db()
     # Main menu for Blog Creater.
