@@ -23,7 +23,7 @@ def main():
     welcome_message("green")
 
     create_db()
-    """Main menu for Blog Creater."""
+    # Main menu for Blog Creater.
     while True:
         print("1. Create a user")
         print("2. Create a category")
@@ -71,19 +71,19 @@ def main():
 
 
 def create_user_prompt():
-    """Prompting user to create a user."""
+    # Prompting user to create a user.
     username = input("Enter username: ")
     create_user(username=username)
     print()
 
 def create_category_prompt():
-    """Prompting user to create a category."""
+    # Prompting user to create a category.
     name = input("Enter category name: ")
     create_category(name=name)
     print()
 
 def create_post_prompt():
-    """Prompting user to create a post."""
+    # Prompting user to create a post.
     user_id = input("Enter user ID: ")
     title = input("Enter post title: ")
     content = input("Enter content: ")
@@ -92,31 +92,31 @@ def create_post_prompt():
     print()
 
 def get_user_by_id_prompt():
-    """Prompting user for input and retrieve a user by their ID."""
+    # Prompting user for input and retrieve a user by their ID.
     user_id = int(input("Enter user ID: "))
     get_user_by_id(user_id)
     print()
 
 def get_post_by_id_prompt():
-    """Prompting user for input and retrieve a post by its ID."""
+    # Prompting user for input and retrieve a post by its ID.
     post_id = int(input("Enter post ID: "))
     get_post_by_id(post_id)
     print()
 
 def get_posts_by_category_prompt():
-    """Prompting user for input and retrieve posts by category."""
+    # Prompting user for input and retrieve posts by category.
     category_id = int(input("Enter category ID: "))
     get_posts_by_category(category_id)
     print()
 
 def get_posts_by_user_prompt():
-    """Prompting user for input and retrieve posts by user."""
+    # Prompting user for input and retrieve posts by user.
     user_id = int(input("Enter user ID: "))
     get_posts_by_user(user_id)
     print()
 
 def delete_post_prompt():
-    """Prompting user for input and delete a post."""
+    # Prompting user for input and delete a post.
     post_id = int(input("Enter post ID to delete: "))
     delete_post(post_id)
     print()

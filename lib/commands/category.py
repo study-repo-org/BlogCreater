@@ -3,7 +3,7 @@ from database import Session
 from models import Category
 
 def create_category(name):
-    """Create a category."""
+    # Create a category.
     session = Session()
     
     if not name:
@@ -17,7 +17,7 @@ def create_category(name):
 
 
 def get_all_categories():
-    """get all categories."""
+    # getting all categories.
     session = Session()
     categories = session.query(Category).all()
 

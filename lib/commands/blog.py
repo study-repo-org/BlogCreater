@@ -4,7 +4,7 @@ from models import User, Category, Post
 
 
 def create_post(user_id, title, content, category_id):
-    """Create a new post."""
+    # Create a new post.
     session = Session()
     
     if user_id == 0:
@@ -33,7 +33,7 @@ def create_post(user_id, title, content, category_id):
 
 
 def get_all_posts():
-    """Retrieve and print all posts with user information."""
+    # getting all posts with user information.
     session = Session()
     posts = session.query(Post).all()
 
@@ -50,7 +50,7 @@ def get_all_posts():
 
 
 def get_post_by_id(post_id):
-    """Retrieve and print a post by its ID with user information."""
+    # getting a post by ID with user information.
     session = Session()
     post = session.query(Post).filter_by(post_id=post_id).first()
 
@@ -65,7 +65,7 @@ def get_post_by_id(post_id):
 
 
 def get_posts_by_category(category_id):
-    """Retrieve and print all posts by a specific category with user information."""
+    # getting all posts by a category with user information.
     session = Session()
     category = session.query(Category).filter_by(category_id=category_id).first()
 
@@ -86,7 +86,7 @@ def get_posts_by_category(category_id):
 
 
 def get_posts_by_user(user_id):
-    """Retrieve and print all posts by a specific user."""
+    # getting all posts by a user.
     session = Session()
     user = session.query(User).filter_by(user_id=user_id).first()
 
@@ -107,7 +107,7 @@ def get_posts_by_user(user_id):
 
     
 def delete_post(post_id):
-    """Delete a post by its ID."""
+    # Delete a post by ID.
     session = Session()
     post = session.query(Post).filter_by(post_id=post_id).first()
 

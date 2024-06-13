@@ -8,4 +8,5 @@ engine = create_engine(DATABASE_URL,  echo=True)
 Session = sessionmaker(bind=engine)
 
 def create_db():
+    # it creates all the database tables
     Base.metadata.create_all(bind=engine)

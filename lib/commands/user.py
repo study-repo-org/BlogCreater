@@ -2,7 +2,7 @@ from database import Session
 from models import User
 
 def create_user(username):
-    """Create a new user."""
+    # Create a new user.
     session = Session()
     
     if not username:
@@ -16,7 +16,7 @@ def create_user(username):
 
 
 def get_all_users():
-    """get all users."""
+    # getting all users.
     session = Session()
     users = session.query(User).all()
     if not users:
@@ -31,7 +31,7 @@ def get_all_users():
 
 
 def get_user_by_id(user_id):
-    """get a user by ID."""
+    # get a user by ID.
     session = Session()
     user = session.query(User).filter_by(user_id=user_id).first()
     if not user:
