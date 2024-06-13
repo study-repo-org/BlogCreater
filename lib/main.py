@@ -33,10 +33,10 @@ def main():
         print("6. Get all categories")
         print("7. Get all posts")
         print("8. Get post by ID")
-        print("10. Get posts by category")
-        print("11. Get posts by user")
-        print("12. Delete a post")
-        print("13. Exit")
+        print("9. Get posts by category")
+        print("10. Get posts by user")
+        print("11. Delete a post")
+        print("12. Exit")
         choice = input("Enter a number: ")
 
         if choice == '1':
@@ -58,12 +58,10 @@ def main():
         elif choice == '9':
             get_posts_by_category_prompt()
         elif choice == '10':
-            get_posts_by_category_prompt()
-        elif choice == '11':
             get_posts_by_user_prompt()
-        elif choice == '12':
+        elif choice == '11':
             delete_post_prompt()
-        elif choice == '13':
+        elif choice == '12':
             print("Exiting")
             break
         else:
